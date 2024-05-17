@@ -10,15 +10,15 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char** argv)
 {
 
     // reading file
-    string pathToFile;
-    cout << "Input path to file: " << endl;
-    // TODO:
-    // cin >> pathToFile;
-    pathToFile = "test.txt";
+    if (argc != 2)
+        erroredExit("Pass path to file as an argument");
+
+    string pathToFile = argv[1];
+
     ifstream file(pathToFile);
     if (!file.is_open())
     {
