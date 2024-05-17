@@ -1,3 +1,4 @@
 .vscode/
 build/
-/task.pdf
+task.pdf
+readme.md
