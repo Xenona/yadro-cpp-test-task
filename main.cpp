@@ -14,10 +14,10 @@ int main(int argc, char** argv)
 {
 
     // reading file
-    if (argc != 2)
-        erroredExit("Pass path to file as an argument");
+    // if (argc != 2)
+    //     erroredExit("Pass path to file as an argument");
 
-    string pathToFile = argv[1];
+    string pathToFile =  "test2.txt" ;// argv[1];
 
     ifstream file(pathToFile);
     if (!file.is_open())
@@ -41,8 +41,9 @@ int main(int argc, char** argv)
     if (stats->clientsInside.size() != 0)
     {
         std::sort(stats->clientsInside.begin(), stats->clientsInside.end());
-        for (string &clientName : stats->clientsInside)
+        while (stats->clientsInside.size())
         {
+            string &clientName = stats->clientsInside[0];
             printEvent(stats->timeEnd, EventID::clientKickedOut, clientName);
 
             int tableID = clientHadTable(stats->tablesUsed, clientName);
@@ -57,6 +58,7 @@ int main(int argc, char** argv)
             }
 
             removeClient(stats->clientsInside, clientName);
+
         }
     }
 

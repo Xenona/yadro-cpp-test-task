@@ -1,5 +1,5 @@
-#include "./Utils/utils.h"
-#include "./Utils/utils.cpp"
+#include "../Utils/utils.h"
+#include "../Utils/utils.cpp"
 #include <cctype>
 #include <gtest/gtest.h>
 

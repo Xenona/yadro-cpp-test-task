@@ -197,8 +197,10 @@ void EventVisitor::operator()(const ClientWaiting &event)
     // if no free tables, client waits;
 
     // if the queue is full, client leaves
-    if (stats->clientsWaiting.size() >= stats->numOfTables)
-        printEvent(event.time, EventID::clientKickedOut, event.clientName);
+    if (stats->clientsWaiting.size() >= stats->numOfTables) {
+        removeClient(stats->clientsInside, event.clientName);
+        return printEvent(event.time, EventID::clientKickedOut, event.clientName);
+    }
 
     // if there's place, queue client
     stats->clientsWaiting.push(event.clientName);

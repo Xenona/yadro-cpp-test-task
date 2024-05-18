@@ -29,7 +29,7 @@ enable_testing()
 
 add_executable(
   tests
-  tests.cc
+  ./Tests/tests.cc
 )
 
 target_link_libraries(
