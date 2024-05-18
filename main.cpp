@@ -14,10 +14,10 @@ int main(int argc, char** argv)
 {
 
     // reading file
-    // if (argc != 2)
-    //     erroredExit("Pass path to file as an argument");
+    if (argc != 2)
+        erroredExit("Pass path to file as an argument");
 
-    string pathToFile =  "test2.txt" ;// argv[1];
+    string pathToFile = argv[1];
 
     ifstream file(pathToFile);
     if (!file.is_open())
