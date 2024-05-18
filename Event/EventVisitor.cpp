@@ -1,9 +1,8 @@
 #include "EventVisitor.h"
 #include <cmath>
-#include <iostream>
 #include <fstream>
 #include "../Utils/utils.h"
-#include "Event/Event.h"
+#include "Event.h"
 
 using namespace std;
 
@@ -125,10 +124,6 @@ void EventVisitor::operator()(const ClientCame &event)
         return printEvent(event.time, EventID::error, Err[ErrCode::NotOpenYet]);
 
     stats->clientsInside.push_back(event.clientName);
-}
-
-void EventVisitor::removeClientAndCalcTable(int time, int tableID)
-{
 }
 
 void EventVisitor::operator()(const ClientChoseTable &event)

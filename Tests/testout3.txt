@@ -9,18 +9,22 @@
 09:48 2 client1 1
 09:48 2 client2 2
 09:48 2 client3 3
-09:52 3 client4
+09:52 2 client4 1
+09:52 13 PlaceIsBusy
 09:52 3 client5
 09:52 3 client6
 09:52 3 client7
-09:52 11 client7
-19:00 11 client1
-19:00 11 client2
-19:00 11 client3
+09:52 4 client1
+09:52 12 client5 1
+09:52 4 client2
+09:52 12 client6 2
+09:52 4 client3
+09:52 12 client7 3
 19:00 11 client4
 19:00 11 client5
 19:00 11 client6
+19:00 11 client7
 19:00
-1 100 09:12
-2 100 09:12
-3 100 09:12
+1 110 09:12
+2 110 09:12
+3 110 09:12

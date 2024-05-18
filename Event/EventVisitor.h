@@ -14,7 +14,6 @@ public:
     EventVisitor(Statistics *stats);
     ~EventVisitor();
     vector<Event> parseEvents(ifstream &file);
-    void removeClientAndCalcTable(int time, int tableID);
 
     void operator()(const ClientCame &event);
     void operator()(const ClientChoseTable &event);
