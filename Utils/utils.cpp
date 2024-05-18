@@ -108,9 +108,10 @@ int checkTime(const string &str)
 
 bool checkClientName(string &name)
 {
+    if (name.length() == 0) return false;
     for (char c : name)
     {
-        if (!(isalpha(c) && islower(c) || isdigit(c) || c == '_'))
+        if (!(isalpha(c) && islower(c) || isdigit(c) || c == '_' || c == '-'))
             return false;
     }
     return true;

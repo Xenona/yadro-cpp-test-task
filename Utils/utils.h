@@ -12,13 +12,14 @@ bool hasNonNumericChars(const std::string &str);
 
 bool tryParsePositiveInt(string s, int *result = nullptr, bool canBeZero = false);
 
+bool checkClientName(string &name);
+
 bool tryReadLine(ifstream &file, string &line);
 
 void erroredExit(string errMsg);
 
 int checkTime(const string &str);
 
-bool checkClientName(string &name);
 
 string getTimeFromMins(int minutes);
 
